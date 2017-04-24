@@ -1,0 +1,8 @@
+
+      window.__NEXT_REGISTER_PAGE('/\"/static/img/the-jerk-1978.jpg\"\n', function() {
+        var error = new Error('Page does not exist: /\"/static/img/the-jerk-1978.jpg\"\n')
+        error.statusCode = 404
+
+        return { error: error }
+      })
+    

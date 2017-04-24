@@ -1,0 +1,177 @@
+@import 'tachyons';
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  cursor: url(./img/avatar-sm.png) 10 10, auto;
+}
+
+ul {
+  list-style: circle;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+  border-bottom: 0.125em solid #cdecff;
+  box-shadow: inset 0 -0.25em 0 #cdecff;
+  transition: all .1s ease-out;
+}
+
+a:visited {
+  /*border-bottom: 0.125em solid purple;*/
+  /*box-shadow: inset 0 -0.25em 0 purple;*/
+}
+
+a:hover {
+  background: #cdecff;
+  border-bottom: 0.125em solid #cdecff;
+  box-shadow: inset 0 -0.25em 0 #cdecff;
+}
+
+a.none {
+  text-decoration: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+
+
+details[open] summary:active,
+details summary:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary:before {
+  content: '▶';
+  display: inline-block;
+  transform-origin: 7px 12px;
+  animation: closeDetails 400ms;
+  animation-fill-mode: both;
+}
+
+a, details > summary {
+  cursor: url(./img/avatar-pointer.png) 10 10, auto;
+}
+
+sup {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+
+sup > a {
+  text-decoration: underline;
+  border: none;
+  box-shadow: none
+}
+
+body > footer > ol > li:target {
+  color: #D62288;
+}
+
+article > h2:hover {
+  animation: rainbows 8s infinite;
+  animation-direction: initial;
+}
+
+article:before {
+  content: "∴";
+  display: block;
+  text-align: center;
+}
+
+article fieldset ul,
+article fieldset li {
+  margin: 0;
+}
+
+.dust {
+  position: fixed;
+  @extend .absolute--fill;
+  z-index: -2;
+}
+
+main {
+  min-height: 100%;
+  height: auto !important;
+  margin-bottom: -7rem;
+}
+
+main:after {
+  content: '';
+  display: block;
+  height: 7rem;
+}
+
+.bonzi-buddy {
+  margin-top: -3rem;
+}
+
+.pre-code {
+  animation: bg-rainbows 120s;
+  animation-direction: initial;
+  line-height: 1.1rem;
+  cursor: text;
+  font-size: 0.8125rem;
+}
+
+.b--rainbows {
+  animation: border-rainbows 16s infinite;
+  animation-direction: initial;
+}
+
+.bg-rainbows {
+  animation: bg-rainbows 32s infinite;
+  animation-direction: initial;
+}
+
+@keyframes bg-rainbows {
+  0%    { background-color: #F6FFFE; }
+  20%   { background-color: #E8FDF5; }
+  40%   { background-color: #FFFCEB; }
+  60%   { background-color: #FFDFDF; }
+  80%   { background-color: #EEEEEE; }
+  100%  { background-color: #F6FFFE; }
+}
+
+@keyframes rainbows {
+  0%    { color: #ff4136; }
+  33%   { color: rgb(255, 217, 102); }
+  66%   { color: rgb(0, 240, 77); }
+  100%  { color: #ff4136; }
+}
+
+@keyframes border-rainbows {
+  0%    { border-color: rgba(0, 14, 96, 10); }
+  25%   { border-color: rgb(255, 0, 94); }
+  50%   { border-color: rgb(255, 217, 102); }
+  75%   { border-color: rgb(0, 240, 77); }
+  100%  { border-color: rgba(0, 14, 96, 10); }
+}
+
+@keyframes closeDetails {
+  from { transform: rotate(90deg); }
+  to { transform: rotate(0); }
+}
+
+@keyframes openDetails {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: rotate(90deg) scale(1);
+  }
+}

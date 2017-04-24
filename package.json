@@ -1,0 +1,37 @@
+{
+  "name": "wookie-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "build:posts": "./src/build-posts.js",
+    "build:static": "wget -r -nH -P docs http://localhost:3000 || echo 'Be Gentle With Me'",
+    "css": "tachyons src/styles.css --minify > static/t.min.css",
+    "dev": "next",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
+    "mz": "^2.6.0",
+    "next": "^2.2.0",
+    "pify": "^2.3.0",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "rehype-raw": "^1.0.0",
+    "rehype-react": "^3.0.0",
+    "remark-parse": "^3.0.0",
+    "remark-rehype": "^2.0.0",
+    "sw-precache": "^5.1.0",
+    "tachyons": "^4.7.1",
+    "tachyons-cli": "^1.0.11",
+    "unified": "^6.1.2"
+  }
+}

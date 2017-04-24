@@ -1,0 +1,4 @@
+.DS_Store
+dist
+.next
+node_modules
