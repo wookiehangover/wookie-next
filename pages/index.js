@@ -35,7 +35,7 @@ export default class App extends Component {
             <ol>
               {props.posts.map((post, i) =>
                 <li className={cx(`mb1 pl1`)} key={i}>
-                  <Link href={`/${post.permalink}`}>
+                  <Link href={post.permalink}>
                     <a>{post.title}</a>
                   </Link>
                 </li>
